@@ -3,6 +3,24 @@ TODO:
     Limit number input
     Clean up structure
 */
+// Get the theme toggle checkbox
+const themeToggle = document.getElementById('themeToggle');
+
+// Function to toggle between light and dark mode
+function toggleTheme() {
+  const calculator = document.querySelector('.calculator');
+
+  if (themeToggle.checked) {
+    document.body.classList.add('dark-mode');
+    calculator.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+    calculator.classList.remove('dark-mode');
+  }
+}
+
+// Event listener for theme toggle change
+themeToggle.addEventListener('change', toggleTheme);
 
 (function() {
     "use strict";
